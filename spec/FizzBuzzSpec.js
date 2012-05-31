@@ -8,6 +8,10 @@ describe("FizzBuzz", function() {
             expect(fizzBuzz.calculate(0)).toEqual(0);
         });
 
+        it("for example 1", function() {
+            expect(fizzBuzz.calculate(1)).toEqual(1);
+        });
+
     });
 
     describe("should return 'fizz' for numbers divisible by 3", function() {

@@ -6,4 +6,5 @@ FizzBuzz.method('calculate', function(input) {
         return 0;
     if (input % 3 === 0)
         return 'fizz';
+    return input;
 });
