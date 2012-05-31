@@ -6,3 +6,7 @@ Function.prototype.method = function(name, func) {
         return this;
     }
 };
+
+Number.prototype.isDivisibleBy = function(divisor) {
+    return this % divisor === 0;
+}
