@@ -1,15 +1,10 @@
-function FizzBuzz() {
+var FizzBuzz = function() {
+    var fizzRule = new FizzBuzzRule(3, 'fizz');
+    var buzzRule = new FizzBuzzRule(5, 'buzz');
+
+    return new FizzBuzzCalculator([
+        fizzRule,
+        buzzRule
+    ]);
 }
 
-FizzBuzz.method('calculate', function(input) {
-    var output = '';
-    if (input.isDivisibleBy(3))
-        output += 'fizz';
-    if (input.isDivisibleBy(5))
-        output += 'buzz';
-
-    if (output.length == 0)
-        return input;
-    else
-        return output;
-});
