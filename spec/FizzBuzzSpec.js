@@ -26,4 +26,28 @@ describe("FizzBuzz", function() {
 
     });
 
+    describe("should return 'buzz' for numbers divisible by 5", function() {
+
+        it("for example 5", function() {
+            expect(fizzBuzz.calculate(5)).toEqual('buzz');
+        });
+
+        it("for example 10", function() {
+            expect(fizzBuzz.calculate(10)).toEqual('buzz');
+        });
+
+    });
+
+    describe("should return 'fizzbuzz' for numbers divisible by 5 and 10", function() {
+
+        it("for example 15", function() {
+            expect(fizzBuzz.calculate(15)).toEqual('fizzbuzz');
+        });
+
+        it("for example 30", function() {
+            expect(fizzBuzz.calculate(30)).toEqual('fizzbuzz');
+        });
+
+    });
+
 });

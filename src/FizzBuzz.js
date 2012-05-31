@@ -2,9 +2,14 @@ function FizzBuzz() {
 }
 
 FizzBuzz.method('calculate', function(input) {
-    if (input === 0)
-        return 0;
+    var output = '';
     if (input.isDivisibleBy(3))
-        return 'fizz';
-    return input;
+        output += 'fizz';
+    if (input.isDivisibleBy(5))
+        output += 'buzz';
+
+    if (output.length == 0)
+        return input;
+    else
+        return output;
 });
