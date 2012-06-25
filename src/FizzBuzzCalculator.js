@@ -9,10 +9,6 @@ function FizzBuzzCalculator(rules) {
     }
 
     this.calculate = function(input) {
-        var output = this.applyRules(input);
-        if (output.length == 0)
-            return input;
-        else
-            return output;
+        return this.applyRules(input) || input;
     }
 }
