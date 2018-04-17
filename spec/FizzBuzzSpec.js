@@ -4,12 +4,12 @@ describe("FizzBuzz", function() {
 
     describe("should return input for numbers not divisible by 3 or 5", function() {
 
-        it("for example 0", function() {
-            expect(fizzBuzz.calculate(0)).toEqual(0);
+        it("for example 8", function() {
+            expect(fizzBuzz.calculate(8)).toEqual(8);
         });
 
-        it("for example 1", function() {
-            expect(fizzBuzz.calculate(1)).toEqual(1);
+        it("for example 12", function() {
+            expect(fizzBuzz.calculate(14)).toEqual(14);
         });
 
     });
@@ -46,6 +46,14 @@ describe("FizzBuzz", function() {
 
         it("for example 30", function() {
             expect(fizzBuzz.calculate(30)).toEqual('fizzbuzz');
+        });
+
+    });
+
+    describe("should return 'pizz' for prime numbers", function() {
+        
+        it("for example 2", function() {
+            expect(fizzBuzz.calculate(2)).toEqual('pizz');
         });
 
     });

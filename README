@@ -1,7 +1,7 @@
 FizzBuzz Kata solution (http://codingdojo.org/cgi-bin/wiki.pl?KataFizzBuzz)
-
 * Done in JavaScript.
-
 * Using Jasmine BDD and Underscore.js
 
+Other requirements added for [Impro-Kata](https://www.meetup.com/es-ES/madswcraft/events/248952891/):
 
+1. If a number is prime then it returns 'Pizz' (with lower priority than FizzBuzz when there is a collision).

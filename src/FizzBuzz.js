@@ -1,10 +1,14 @@
 var FizzBuzz = function() {
-    var fizzRule = new FizzBuzzRule(3, 'fizz');
-    var buzzRule = new FizzBuzzRule(5, 'buzz');
+    var fizzBuzzRule = new FizzBuzzRule('fizzbuzz');
+    var fizzRule = new FizzRule('fizz');
+    var buzzRule = new BuzzRule('buzz');
+    var primeRule = new PrimeRule('pizz');
 
     return new FizzBuzzCalculator([
+        fizzBuzzRule,
         fizzRule,
-        buzzRule
+        buzzRule,
+        primeRule
     ]);
 }
 
