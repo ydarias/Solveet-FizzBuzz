@@ -1,9 +1,8 @@
 function FizzBuzzCalculator(rules) {
+
     this.rules = rules;
 
-    function isNumeric(n) {
-        return !isNaN(parseFloat(n)) && isFinite(n);
-    }
+    this.outputFormatter = new OutputFormatter();
 
     this.applyRules = function(input) {
         var output = '';
@@ -13,14 +12,29 @@ function FizzBuzzCalculator(rules) {
             } 
         })
 
-        if (isNumeric(output)) {
-            return parseInt(output);
-        } else {
-            return output;
-        }
+        return this.outputFormatter.format(output);
     }
 
     this.calculate = function(input) {
         return this.applyRules(input) || input;
     }
+
 }
+
+function OutputFormatter() {
+
+    function isNumeric(n) {
+        return !isNaN(parseFloat(n)) && isFinite(n);
+    }
+
+    return {
+        format(input) {
+            if (isNumeric(input)) {
+                return parseInt(input);
+            } 
+
+            return input;
+        }
+    }
+
+} 
