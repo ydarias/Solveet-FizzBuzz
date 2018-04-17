@@ -38,7 +38,7 @@ describe("FizzBuzz", function() {
 
     });
 
-    describe("should return 'fizzbuzz' for numbers divisible by 5 and 10", function() {
+    describe("should return 'fizzbuzz' for numbers divisible by 3 and 5", function() {
 
         it("for example 15", function() {
             expect(fizzBuzz.calculate(15)).toEqual('fizzbuzz');
