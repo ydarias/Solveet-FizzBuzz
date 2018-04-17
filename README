@@ -4,4 +4,5 @@ FizzBuzz Kata solution (http://codingdojo.org/cgi-bin/wiki.pl?KataFizzBuzz)
 
 Other requirements added for [Impro-Kata](https://www.meetup.com/es-ES/madswcraft/events/248952891/):
 
-1. If a number is prime then it returns 'Pizz' (with lower priority than FizzBuzz when there is a collision).
+1. If a number is prime then it returns 'pizz' (with lower priority than FizzBuzz when there is a collision).
+1. If the number matches the last two digits of the current time in epoch format it returns the squared of that number.

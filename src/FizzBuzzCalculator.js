@@ -1,6 +1,10 @@
 function FizzBuzzCalculator(rules) {
     this.rules = rules;
 
+    function isNumeric(n) {
+        return !isNaN(parseFloat(n)) && isFinite(n);
+    }
+
     this.applyRules = function(input) {
         var output = '';
         _.each(this.rules, function(rule) { 
@@ -9,7 +13,11 @@ function FizzBuzzCalculator(rules) {
             } 
         })
 
-        return output;
+        if (isNumeric(output)) {
+            return parseInt(output);
+        } else {
+            return output;
+        }
     }
 
     this.calculate = function(input) {

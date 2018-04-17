@@ -1,6 +1,12 @@
 describe("FizzBuzz", function() {
 
-    var fizzBuzz = new FizzBuzz();
+    var fakeTimeProvider = {
+        getCurrentTime: function() {
+            return 1234523414;
+        }
+    };
+
+    var fizzBuzz = new FizzBuzz(fakeTimeProvider);
 
     describe("should return input for numbers not divisible by 3 or 5", function() {
 
@@ -8,8 +14,8 @@ describe("FizzBuzz", function() {
             expect(fizzBuzz.calculate(8)).toEqual(8);
         });
 
-        it("for example 12", function() {
-            expect(fizzBuzz.calculate(14)).toEqual(14);
+        it("for example 16", function() {
+            expect(fizzBuzz.calculate(16)).toEqual(16);
         });
 
     });
@@ -54,6 +60,14 @@ describe("FizzBuzz", function() {
         
         it("for example 2", function() {
             expect(fizzBuzz.calculate(2)).toEqual('pizz');
+        });
+
+    });
+
+    describe("should return squared of the input if", () => {
+
+        it("input matches the last two digits of current time in epoch format", () => {
+            expect(fizzBuzz.calculate(14)).toEqual(196);
         });
 
     });
